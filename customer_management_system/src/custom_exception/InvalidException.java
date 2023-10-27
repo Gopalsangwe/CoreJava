@@ -1,9 +1,9 @@
 package custom_exception;
 
-public class InvalidException {
+public class InvalidException extends Exception {
 	
 	public InvalidException(String mesg) {
-		super();
+		super(mesg);
 	}
 
 }

@@ -18,20 +18,27 @@ public class Customer {
 		customerCount=1;
 	}
 
-	public Customer(int id, String firstname, String lastname, String email, String password, LocalDate dob,
+	public Customer( String firstname, String lastname, String email, String password,double registrationAmount, LocalDate dob,
 			ServicePlan plan) {
 		super();
-		this.id = id;
+		
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.password = password;
+		this.registrationAmount=registrationAmount;
 		this.dob = dob;
 		this.plan = plan;
 		this.id=customerCount++;
 	}
 	
 	
+
+//	public Customer(String firstname2, String lastname2, String email2, double registrationAmount2, ServicePlan sp2,
+//			LocalDate d1) {
+//	}
+
+
 
 	public String getFirstname() {
 		return firstname;
@@ -111,6 +118,14 @@ public class Customer {
 				+ ", registrationAmount=" + registrationAmount + ", dob=" + dob + ", plan=" + plan + "]";
 	}
 	
+	@Override
+	 public boolean equals(Object anotherObj) 
+	 {
+		System.out.println("in costomer eq");
 		
+		if(anotherObj instanceof Customer)
+			return this.email.equals(((Customer)anotherObj).email);
+		return false;
+	 }	
 
 }
