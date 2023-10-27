@@ -42,18 +42,3 @@ public static Customer validateAllInputs(String firstName, String lastName, Stri
 }
 
 
-
-//
-//	public static LocalDate parseDate(String date) {
-//		return LocalDate.parse(date);
-//	}
-//
-//	// add a method to call validation rules
-//	public static Customer validateAllInputs(String firstName, String lastName, String email, String password,
-//			double regAmount, String dob, String plan) throws InvalidInputException {
-//		ServicePlan validatedPlan = parseAndValidatePlan(plan);
-//		validatePlanAmount(validatedPlan, regAmount);
-//		LocalDate date = parseDate(dob);
-//		return new Customer(firstName, lastName, email, password, regAmount, date, validatedPlan);
-//	}
-
