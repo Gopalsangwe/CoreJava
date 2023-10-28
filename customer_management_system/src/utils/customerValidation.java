@@ -1,6 +1,8 @@
 package utils;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.time.LocalDate;
 
@@ -28,6 +30,14 @@ public static void validatePlanAmount(ServicePlan plan, double registrationAmoun
 
 public static LocalDate parseDate(String date) {
 	return LocalDate.parse(date);
+}
+
+public static void checkForDuplication(int id,ArrayList<Customer> customer) throws InvalidException{
+	 Customer newcustomer =  new Customer(id); 
+	 if(customer.contains(id)) {
+		 throw new InvalidException("Duplicate Entry!!!");
+	 }
+	
 }
 
 public static Customer validateAllInputs(String firstName, String lastName, String email, String password,

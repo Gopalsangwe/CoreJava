@@ -32,6 +32,10 @@ public class Customer {
 		this.id=customerCount++;
 	}
 	
+	public Customer(int id) {
+		this.id=id;
+	}
+	
 	
 
 //	public Customer(String firstname2, String lastname2, String email2, double registrationAmount2, ServicePlan sp2,
